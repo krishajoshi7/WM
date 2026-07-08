@@ -14,15 +14,16 @@ export function AppShell({
       <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <Link className="font-black text-primary" href="/">
-            Sustainable ECG
+            Curtail and Sustain Enterprise LLP
           </Link>
+          {/*  
           <nav className="flex flex-wrap items-center gap-3 text-sm font-semibold text-muted-foreground">
             <Link href="/auth">Auth</Link>
             <Link href="/dashboard/generator">Generator</Link>
             <Link href="/dashboard/collector">Collector</Link>
             <Link href="/dashboard/recycler">Recycler</Link>
             <Link href="/dashboard/admin">Admin</Link>
-          </nav>
+          </nav> */}
           <div className="flex items-center gap-2">
             {role ? (
               <span className="hidden rounded-md border border-border px-3 py-1 text-xs font-bold uppercase tracking-wide text-muted-foreground sm:inline-flex">

@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     const { data, error } = await supabase.auth.admin.createUser({
       email: body.email,
       password: body.password,
-      email_confirm: false,
+      email_confirm: true,
       user_metadata: {
         role: body.role,
         company_name: body.company_name
@@ -44,8 +44,13 @@ export async function POST(request: NextRequest) {
     if (error || !data.user) {
       throw error || new Error("Supabase Auth did not return a user");
     }
-
-    const status = body.role === "generator" ? "approved" : "pending";
+    const status = "approved";
+    /**const status = body.role === "generator" ? "approved" : "pending"; only generator
+    /***for only generator and admin roles to be approved auto,
+    const status =
+  body.role === "generator" || body.role === "admin"
+    ? "approved"
+    : "pending"; */
     const { error: profileError } = await supabase.from("profiles").insert({
       id: data.user.id,
       role: body.role,

@@ -32,18 +32,16 @@ export default async function Home() {
         <div className="mx-auto grid min-h-[82vh] max-w-7xl items-center gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
           <div className="max-w-3xl text-white">
             <p className="text-sm font-black uppercase tracking-[0.16em] text-emerald-200">
-              Indian EPR traceability platform
+              The Circular Economy Traceability Platform 
             </p>
             <h1 className="mt-4 text-5xl font-black leading-none tracking-normal sm:text-7xl">
-              Digitizing Waste Traceability & EPR Compliance
+              The Circular Economy Traceability Platform 
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85">
-              Sustainable ECG creates signed QR identities for every waste batch,
-              records custody evidence at each handoff, and turns recycling logs
-              into an auditable EPR compliance trail.
+              Curtail & Sustain Enterprise creates a digital record of every recyclable material, bringing traceability to its post-use lifecycle from disposal to recycling.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              {["generator", "collector", "recycler", "admin"].map((role) => (
+              {["generator", "collector", "recycler"].map((role) => (
                 <Link
                   className="inline-flex min-h-11 items-center gap-2 rounded-md bg-white px-4 text-sm font-black capitalize text-primary"
                   href={`/auth?role=${role}`}
@@ -82,42 +80,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="bg-muted py-14">
-        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
-          {stakeholders.map(([title, body]) => (
-            <article className="rounded-lg border border-border bg-card p-5 shadow-operational" key={title}>
-              <BadgeCheck className="mb-4 h-6 w-6 text-primary" />
-              <h2 className="text-xl font-black">{title}</h2>
-              <p className="mt-3 text-sm leading-6 text-muted-foreground">{body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm font-black uppercase tracking-[0.16em] text-primary">
-            How it works
-          </p>
-          <h2 className="mt-3 text-4xl font-black tracking-normal">
-            The custody chain is the legal backbone.
-          </h2>
-        </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-5">
-          {[
-            "Generator submits batch",
-            "JWT-signed QR is printed",
-            "Collector scans at pickup",
-            "Recycler verifies delivery",
-            "Recycling log posts EPR payload"
-          ].map((step, index) => (
-            <article className="rounded-lg border border-border bg-card p-4" key={step}>
-              <span className="text-sm font-black text-accent">0{index + 1}</span>
-              <h3 className="mt-3 font-black">{step}</h3>
-            </article>
-          ))}
-        </div>
-      </section>
+      
     </AppShell>
   );
 }

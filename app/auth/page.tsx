@@ -142,10 +142,10 @@ export default function AuthPage() {
     <main className="grid min-h-screen place-items-center bg-muted px-4 py-10">
       <section className="w-full max-w-2xl rounded-lg border border-border bg-card p-6 shadow-operational">
         <a className="font-bold text-primary" href="/">
-          Sustainable ECG
+          Curtail and Sustain Enterprise LLP
         </a>
         <p className="mt-6 text-sm font-black uppercase tracking-[0.16em] text-primary">
-          Auth
+          hiii
         </p>
         <h1 className="mt-2 text-4xl font-black tracking-normal">
           Role-based access for waste custody
